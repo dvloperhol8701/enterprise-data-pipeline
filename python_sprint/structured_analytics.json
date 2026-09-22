@@ -1,0 +1,28 @@
+{
+    "extracted_events": [
+        {
+            "timestamp": "2026-09-22T10:15:32Z",
+            "error_code": "SYS_ERR_404",
+            "user_id": "USER_8921",
+            "message": "Failed to locate resource on API gateway",
+            "latency_ms": 512,
+            "is_anomaly": true
+        },
+        {
+            "timestamp": "2026-09-22T10:16:04Z",
+            "error_code": "SYS_INF_200",
+            "user_id": "USER_1102",
+            "message": "Database transaction committed safely",
+            "latency_ms": 12,
+            "is_anomaly": false
+        },
+        {
+            "timestamp": "2026-09-22T10:16:45Z",
+            "error_code": "SEC_WRN_101",
+            "user_id": "USER_4093",
+            "message": "Unauthorized access attempt flagged",
+            "latency_ms": 345,
+            "is_anomaly": true
+        }
+    ]
+}
