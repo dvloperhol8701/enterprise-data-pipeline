@@ -4,8 +4,28 @@
 ## 📊 Project Architecture Overview
 This ecosystem acts as a robust, full-stack data solution designed to process unstructured server log event streams, ingest them cleanly into a relational storage system, run vectorized matrix performance queries, and compile multi-format analytical alerts automatically.
 
-[ MESSY TEXT STREAM ]           [ PRODUCTION PARSING ENGINE ]production_logs.txt         --->     advanced_pipeline.py|v[ SECURE DATA PAYLOAD ]             [ DATA ENGINEERING STORAGE ]structured_analytics.json       --->       littlelemon.db (SQL)|v[ AUTOMATED AUDITING ]              [ VECTORIZED COMPUTE ENGINE ]verify_data.py              <---     vector_analytics.py|                                      |v                                      v[ DEFENSIVE SYSTEM UTILITY ]          [ ENTERPRISE EXPORT PIPELINE ]test_pipeline.py                      report_generator.py|v[ EXECUTIVE MANAGEMENT REPORTS ]pipeline_executive_summary.mdcritical_anomalies_report.csv
+```text
+[ MESSY TEXT STREAM ] [ PRODUCTION PARSING ENGINE ]
+production_logs.txt ---> advanced_pipeline.py
+|
+v
+[ SECURE DATA PAYLOAD ] [ DATA ENGINEERING STORAGE ]
+structured_analytics.json ---> littlelemon.db (SQL)
+|
+v
+[ AUTOMATED AUDITING ] [ VECTORIZED COMPUTE ENGINE ]
+verify_data.py <--- vector_analytics.py
+||
+v v
+[ DEFENSIVE SYSTEM UTILITY ] [ ENTERPRISE EXPORT PIPELINE ]
+test_pipeline.py report_generator.py
+|
+v
+[ EXECUTIVE MANAGEMENT REPORTS ]
+pipeline_executive_summary.md
+critical_anomalies_report.csv
 
+```
 ## 🛠️ Core Functional Components
 
 *   **Ingestion & Parsing (`advanced_pipeline.py`):** Leverages highly optimized Regular Expressions (Regex) to parse timestamp elements, status codes, and latency metrics from messy log text files. Implements modern, timezone-aware date formatting and exports a structured JSON document.
